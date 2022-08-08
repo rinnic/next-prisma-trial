@@ -16,7 +16,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Grid container spacing={0}>
+        <Grid container spacing={0} sx={{
+          width: "100%",
+          height: "100%"
+        }}>
           <Grid item xs={4}>
             <EmployeeForm />
           </Grid>

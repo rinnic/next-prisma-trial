@@ -7,6 +7,7 @@ import {
   InputLabel,
   FormControl,
   Button,
+  Typography
 } from "@mui/material";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
@@ -23,6 +24,7 @@ const EmployeeForm = (props) => {
         height: "100%",
       }}
     >
+      <Typography variant="h5">Add a new Employee</Typography>
       <TextField id="first-name" label="first name" onChange={() => {}} fullWidth/>
       <TextField id="last-name" label="last name" onChange={() => {}} fullWidth/>
       <LocalizationProvider dateAdapter={AdapterDateFns} fullWidth>
@@ -43,7 +45,7 @@ const EmployeeForm = (props) => {
           <MenuItem value="UNDEFINED">OTHER</MenuItem>
         </Select>
       </FormControl>
-      <Button id="add-button" type="submit">
+      <Button id="add-button" type="submit" variant="contained" fullWidth>
         Add
       </Button>
     </Box>
