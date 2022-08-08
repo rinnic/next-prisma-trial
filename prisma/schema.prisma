@@ -1,11 +1,22 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model Employee {
+  id         Int      @id @default(autoincrement())
+  birthDate DateTime
+  firstName String @db.VarChar(255)
+  lastName String @db.VarChar(255)
+  gender Gender @default(UNDEFINED)
+}
+
+enum Gender {
+  M
+  F
+  UNDEFINED
 }
