@@ -1,13 +1,14 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
+
+import { Grid } from "@mui/material";
 
 import EmployeeForm from "../components/EmployeeForm";
 import EmployeeList from "../components/EmployeeList";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Employees</title>
         <meta name="description" content="Next.js and prosma trial" />
@@ -15,8 +16,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <EmployeeForm />
-        <EmployeeList />
+        <Grid container spacing={0}>
+          <Grid item xs={4}>
+            <EmployeeForm />
+          </Grid>
+          <Grid item xs={8}>
+            <EmployeeList />
+          </Grid>
+        </Grid>
       </main>
     </div>
   );
