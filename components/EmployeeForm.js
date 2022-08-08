@@ -16,7 +16,6 @@ const EmployeeForm = (props) => {
     <Box
       sx={{
         padding: "2rem",
-        marginTop: 8,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
